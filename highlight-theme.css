@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   CODE CONTAINER & EDITOR COMPONENT (DRAKULA / MODERN DARK)
+   ========================================================================== */
+.code-container {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 16px 0;
+  background-color: #050505 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+  font-family: 'Fira Code', monospace, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  box-sizing: border-box;
+}
+
+/* Header */
+.code-header,
+.code-card-head {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 16px !important;
+  background-color: #0d0d0d !important;
+  border-bottom: 1px solid #1f2937 !important;
+  min-height: 42px;
+  box-sizing: border-box;
+}
+
+.code-header-left {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #9ca3af !important;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+.code-header-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  color: #9ca3af !important;
+  fill: currentColor !important;
+  display: inline-block !important;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.code-lang-label {
+  font-family: 'Fira Code', monospace, ui-monospace !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: #d1d5db !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.code-header-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #9ca3af !important;
+  flex-shrink: 0;
+}
+
+.code-action-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 5px !important;
+  color: #9ca3af !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  box-sizing: border-box;
+}
+
+.code-action-btn:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.code-action-btn:active {
+  transform: scale(0.92) !important;
+}
+
+.code-action-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  display: block !important;
+  pointer-events: none;
+}
+
+/* Body */
+.code-body {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  padding: 16px !important;
+  background-color: #050505 !important;
+  overflow-x: auto !important;
+  box-sizing: border-box;
+}
+
+.code-line-numbers {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: right !important;
+  padding-right: 14px !important;
+  margin-right: 14px !important;
+  border-right: 1px solid rgba(31, 41, 55, 0.6) !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  color: #4b5563 !important;
+  font-family: 'Fira Code', monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.625 !important;
+  min-width: 24px !important;
+  flex-shrink: 0;
+}
+
+.code-line-numbers span {
+  display: block !important;
+  line-height: 1.625 !important;
+  color: #4b5563 !important;
+  font-size: 13.5px !important;
+}
+
+.code-pre,
+.code-container pre {
+  flex: 1 1 0% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  overflow-x: auto !important;
+  white-space: pre !important;
+  font-family: 'Fira Code', monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.625 !important;
+  tab-size: 4 !important;
+}
+
+.code-pre code,
+.code-container pre code,
+pre code.hljs {
+  display: block !important;
+  background: transparent !important;
+  padding: 0 !important;
+  color: #c9d1d9 !important;
+  font-family: 'Fira Code', monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.625 !important;
+  white-space: pre !important;
+}
+
+/* Syntax Highlighting Colors */
+.keyword, .hljs-keyword { color: #ff7b72; } /* Pink/Red for def, if, return, else */
+.function, .hljs-function, .hljs-title.function_, .hljs-title.class_, .hljs-title { color: #d2a8ff; } /* Purple for function names */
+.built-in, .hljs-built_in, .hljs-type { color: #79c0ff; } /* Blue for int, input, print */
+.string, .hljs-string, .hljs-regexp { color: #a5d6ff; } /* Light Blue for strings */
+.number, .hljs-number, .hljs-literal { color: #79c0ff; } /* Blue for numbers */
+.operator, .hljs-operator { color: #ff7b72; } /* Pink/Red for ==, *, - */
+.variable, .hljs-variable, .hljs-params { color: #c9d1d9; } /* Default text color */
+.punctuation, .hljs-punctuation { color: #c9d1d9; } /* Brackets, colons */
+
+/* Adjusted for specific image theme colors */
+.img-keyword, .hljs-keyword { color: #ff79c6 !important; }
+.img-function, .hljs-title.function_, .hljs-title { color: #f1fa8c !important; }
+.img-operator, .hljs-operator { color: #ffb86c !important; }
+.img-number, .hljs-number { color: #8be9fd !important; }
+.img-string, .hljs-string { color: #50fa7b !important; }
+.img-builtin, .hljs-built_in, .hljs-type { color: #8be9fd !important; }
+.hljs-comment, .hljs-quote, .hljs-doctag { color: #6272a4 !important; font-style: italic; }
+.hljs-attr, .hljs-attribute { color: #50fa7b !important; }
+.hljs-tag, .hljs-name { color: #ff79c6 !important; }
+.hljs-symbol, .hljs-bullet { color: #f1fa8c !important; }
+.hljs-meta { color: #ff79c6 !important; }
